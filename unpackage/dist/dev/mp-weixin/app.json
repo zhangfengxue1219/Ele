@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/order/order",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/cart/cart"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "饿了么",
+    "navigationBarBackgroundColor": "#0088FF"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#0088ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tabs/hurry.png",
+        "selectedIconPath": "static/images/tabs/hurry1.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "selectedIconPath": "static/images/tabs/order.png",
+        "iconPath": "static/images/tabs/order1.png",
+        "text": "订单"
+      },
+      {
+        "iconPath": "static/images/tabs/personal.png",
+        "pagePath": "pages/personal/personal",
+        "selectedIconPath": "static/images/tabs/personal1.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

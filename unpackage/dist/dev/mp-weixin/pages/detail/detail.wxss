@@ -1,0 +1,219 @@
+.shopInfo .header {
+  height: 200rpx;
+  width: 100%;
+  background: -webkit-linear-gradient(left, #776789, #ccc);
+  background: linear-gradient(to right, #776789, #ccc);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.shopInfo .header .Img {
+  width: 150rpx;
+  height: 150rpx;
+  border: 2rpx solid #dfdfdf;
+  border-radius: 10rpx;
+  margin-top: 80rpx;
+}
+.shopInfo .shopInfoContainer {
+  width: 100%;
+  height: 233rpx;
+  padding: 60rpx 0rpx 0rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.shopInfo .shopInfoContainer .headerInfo {
+  width: 540rpx;
+  height: 86rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.shopInfo .shopInfoContainer .headerInfo .title {
+  font-weight: bold;
+  padding: 0rpx 20rpx;
+  font-size: 41rpx;
+}
+.shopInfo .shopInfoContainer .headerInfo .Info {
+  font-size: 22rpx;
+  color: #999;
+}
+.shopInfo .shopInfoContainer .headerInfo .Info .min {
+  display: inline-block;
+}
+.shopInfo .shopInfoContainer .headerInfo .Info .sale {
+  display: inline-block;
+  margin: 0 20rpx;
+}
+.shopInfo .shopInfoContainer .headerInfo .Info .score {
+  display: inline-block;
+}
+.shopInfo .shopInfoContainer .tips {
+  font-size: 29rpx;
+  color: #999;
+  margin: 17rpx 75rpx 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.shopInfo .mainContainer {
+  height: calc(100vh - 248rpx);
+}
+.shopInfo .mainContainer .navScroll {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 90rpx;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.shopInfo .mainContainer .navScroll .navItem {
+  box-sizing: border-box;
+  height: 50rpx;
+  margin: 20rpx 20rpx;
+  line-height: 50rpx;
+}
+.shopInfo .mainContainer .navScroll .navItem.active {
+  font-weight: bold;
+  border-bottom: 1rpx solid #08f;
+}
+.shopInfo .mainContainer .main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-top: 1rpx solid #eee;
+  box-sizing: border-box;
+}
+.shopInfo .mainContainer .main .leftContainer {
+  width: 20%;
+  height: 100%;
+  border-right: 1rpx solid #eee;
+  box-sizing: border-box;
+}
+.shopInfo .mainContainer .main .leftContainer .scrollNav {
+  height: calc(100vh - 82rpx);
+}
+.shopInfo .mainContainer .main .leftContainer .scrollNav .Item {
+  position: relative;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #eee;
+}
+.shopInfo .mainContainer .main .leftContainer .scrollNav .Item.active {
+  background: #fff;
+}
+.shopInfo .mainContainer .main .rightContainer {
+  width: 80%;
+  height: 100%;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll {
+  height: calc(100vh - 82rpx);
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .test {
+  font-size: 20rpx;
+  color: #999;
+  height: 58rpx;
+  margin-left: 20rpx;
+  line-height: 58rpx;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList {
+  height: 100%;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 20rpx;
+  color: #333;
+  font-size: 24rpx;
+  height: 230rpx;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .shopImg {
+  width: 190rpx;
+  height: 190rpx;
+  margin-right: 10rpx;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .shopImg .Img {
+  width: 100%;
+  height: 100%;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .context .top {
+  height: 180rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .context .top .title {
+  font-size: 30rpx;
+  height: 40rpx;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .context .top .kind {
+  font-size: 20rpx;
+  color: #999;
+  margin: 10rpx 0rpx;
+  width: 320rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .context .top .sals {
+  height: 21rpx;
+  margin: 13rpx 0rpx 0rpx 0rpx;
+  font-size: 20rpx;
+  color: #999;
+  box-sizing: border-box;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .context .top .price {
+  height: 44rpx;
+  line-height: 44rpx;
+  margin-top: 22rpx;
+  font-size: 32rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.shopInfo .mainContainer .main .rightContainer .shopScroll .shopList .shopItem .context .top .price .icon-wuuiconxiangjifangda {
+  color: #08f;
+}
+.t {
+  font-size: 0rpx;
+}
+

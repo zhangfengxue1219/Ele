@@ -1,0 +1,12 @@
+{
+  "name": "ele",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vuex": "^3.6.2"
+  }
+}

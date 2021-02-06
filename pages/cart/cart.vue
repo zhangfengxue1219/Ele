@@ -1,0 +1,187 @@
+<template>
+	<view class="cartContainer">
+				<!-- 购物车列表 -->
+		<view class="cartList">
+			<view class="cartItem" v-for="(cartItem, index) in cartList" :key='cartItem.id'>
+				<text class='iconfont icon-iconfontxuanzhong ' :class="{selected: cartItem.isSelected}" @click="changeSelected(!cartItem.isSelected, index)"></text>
+				<view class="shopItem">
+					<image class="shopImg" :src="cartItem.image" mode=""></image>
+					<view class="shopInfo">
+						<text>{{cartItem.name}}</text>
+						<text class="price">￥{{cartItem.price}}</text>
+					</view>
+				</view>
+				<!-- 控制数量 -->
+				<view class="countCtrl">
+					<text class="add" @click="changeCount(true, index)"> + </text>
+					<text class="count"> {{cartItem.count}} </text>
+					<text class="del" @click="changeCount(false, index)"> - </text>
+				</view>
+			</view>
+		</view>
+		<!-- 底部下单 -->
+		<view class="cartFooter">
+			<text class='iconfont icon-iconfontxuanzhong ' :class="{selected: isAllSelected}" @click="changeAllSelected(!isAllSelected)"></text>
+			<text class="allSelected">已选 {{totalCount}}</text>
+			<view class="right">
+				<text class="totalPrice">合计: ￥{{totalPrice}}</text>
+				<text class="preOrder">下单</text>
+			</view>
+		</view>
+				
+	</view>
+</template>
+
+<script>
+	import {mapState, mapMutations, mapGetters} from  'vuex'
+	export default {
+		data() {
+			return {
+				
+			};
+		},
+		computed: {
+			...mapState({
+				cartList: state => state.cart.cartList
+			}),
+			...mapGetters(['isAllSelected', 'totalCount', 'totalPrice'])
+		},
+		methods: {
+			...mapMutations({
+				changeCountMutation: 'changeCountMutation',
+				changeIsSelectedMutation: 'changeIsSelectedMutation',
+				changeAllSelectedMutation: 'changeAllSelectedMutation',
+				cartListMuta:'cartListMuta'
+			}),
+			// 修改数量
+			changeCount(isAdd, index){
+				this.changeCountMutation({isAdd, index})
+			},
+			// 修改是否选中的状态
+			changeSelected(isSelected, index){
+				this.changeIsSelectedMutation({isSelected, index})
+			},
+			// 全选/全不选
+			changeAllSelected(isAllSelected){
+				this.changeAllSelectedMutation(isAllSelected)
+			}
+			
+		}
+	}
+</script>
+
+<style lang="stylus">
+	/* iconfont 公共样式 */
+	.cartImg
+		display block
+		width 248upx
+		height 248upx
+		margin 300upx auto 50upx
+
+	.cartContainer
+		position relative
+		background #f4f4f4
+		height 100%
+		.header
+			display flex
+			background #eee
+			text
+				width 33.333%
+				height 80upx
+				line-height 80upx
+				text-align center
+				font-size 26upx
+		.contentContainer
+			
+			button
+				width 480upx
+				height 92upx
+				background #DD1A21
+				color #fff
+				font-size 32upx
+				line-height 92upx
+			.addMore
+				text-align center
+				font-size 26upx
+				color #7f7f7f
+				line-height 60rpx
+		.cartList
+			.cartItem
+				position relative
+				display flex
+				height 172upx
+				background #fff
+				margin-top 20upx
+				padding 20upx
+				.iconfont
+					font-size 40upx
+					line-height 172upx
+					margin 0 40upx
+					color #999
+					&.selected
+						color: #BB2C08
+				.shopItem
+					display flex 
+					.shopImg
+						width 172upx
+						height 172upx
+						background #eee
+					.shopInfo
+						font-size 28upx
+						display flex
+						flex-direction column
+						margin-left 20upx
+						text
+							line-height 60upx
+						.price
+							color: #BB2C08
+				.countCtrl
+					position absolute
+					right 20upx
+					bottom 30upx
+					text
+						display inline-block
+						width 60upx
+						height 50upx
+						text-align center
+						line-height 50upx
+						border 1upx solid #EEEEEE
+						&:nth-child(2)
+							border none
+							border-top 1upx solid #EEEEEE
+							border-bottom 1upx solid #EEEEEE
+		.cartFooter
+			position absolute
+			display flex	
+			bottom 2rpx
+			height 96upx
+			line-height 96upx
+			width 100%
+			background #fff
+			font-size 30upx
+			.iconfont
+				font-size 40upx
+				margin 0 20upx
+				color: #999
+				&.selected
+					color: #BB2C08
+			.right 
+				height 96upx
+				position absolute
+				right 0
+				.totalPrice
+					display inline-block
+					height 96upx
+					line-height 96upx
+				.preOrder
+					display inline-block
+					background #DD1A21
+					width 225upx
+					height 96upx
+					line-height 96upx
+					text-align center
+					font-size 28upx
+					color #fff
+					margin-left 30upx
+					
+</style>

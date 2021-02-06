@@ -1,0 +1,1 @@
+<view class="loginContainer"><view class="title _p">欢迎使用 饿了么外卖</view><view class="text _p">立即登录，享受优质服务</view><view class="loginMethods _div"><button class="login wechatLogin" open-type="getUserInfo" data-event-opts="{{[['getuserinfo',[['handleGetUserInfo',['$event']]]]]}}" bindgetuserinfo="__e">微信登录</button><button class="login emailLogin">邮箱登录</button></view></view>
